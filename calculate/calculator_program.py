@@ -10,6 +10,20 @@ def calculate(num1, num2, operation):
             return num1 / num2
         else:
             return "Ошибка: Деление на ноль."
+    elif operation == '^':
+        return num1 ** num2
+    elif operation == '%':
+        if num2 != 0:
+            return num1 % num2
+        else:
+            return "Ошибка: Деление на ноль."
+    elif operation == '//':
+        if num2 != 0:
+            return num1 // num2
+        else:
+            return "Ошибка: Деление на ноль."
+    elif operation == 'neg':
+        return -num2
     else:
         return "Неизвестная операция."
 

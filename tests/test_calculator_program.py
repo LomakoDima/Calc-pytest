@@ -27,3 +27,21 @@ def test_calculate_float_result():
 
 def test_calculate_zero_result():
     assert calculate(3, 3, '-') == 0
+
+def test_calculate_power():
+    assert calculate(2, 3, '^') == 8
+
+def test_calculate_modulus():
+    assert calculate(10, 3, '%') == 1
+
+def test_calculate_modulus_by_zero():
+    assert calculate(10, 0, '%') == "Ошибка: Деление на ноль."
+
+def test_calculate_integer_division():
+    assert calculate(10, 3, '//') == 3
+
+def test_calculate_integer_division_by_zero():
+    assert calculate(10, 0, '//') == "Ошибка: Деление на ноль."
+
+def test_calculate_negation():
+    assert calculate(0, 5, 'neg') == -5
